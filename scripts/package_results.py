@@ -9,7 +9,7 @@ target=ROOT/'magnonic-lm-mvp-v1.zip'
 paths=[]
 for directory in ('src','tests','scripts','configs','docs','results','aic-preflight-20261014'):
     for p in (ROOT/directory).rglob('*'):
-        if p.is_file() and '__pycache__' not in str(p):paths.append(p)
+        if p.is_file() and '__pycache__' not in str(p) and p!=ROOT/'results/delivery.json':paths.append(p)
 paths.extend(ROOT/name for name in ('README.md','requirements.txt','pyproject.toml','codex_magnonic_lm_mvp_prompt.md'))
 with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED) as archive:
     for path in sorted(set(paths)):archive.write(path,'magnonic-lm-mvp-v1/'+str(path.relative_to(ROOT)))
