@@ -1,0 +1,5 @@
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+JobID                               JobName      State ExitCode               Start                 End    Elapsed                                                                        AllocTRES 
+------------ ------------------------------ ---------- -------- ------------------- ------------------- ---------- -------------------------------------------------------------------------------- 
+5219                      magnonic-study-w0  COMPLETED      0:0 2026-10-14T06:15:35 2026-10-14T06:25:18   00:09:43                                        billing=2,cpu=2,gres/gpu=1,mem=16G,node=1 
+5220                      magnonic-study-w1  COMPLETED      0:0 2026-10-14T06:15:35 2026-10-14T06:30:42   00:15:07                                        billing=2,cpu=2,gres/gpu=1,mem=16G,node=1 

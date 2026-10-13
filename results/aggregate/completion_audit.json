@@ -1,0 +1,388 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "requirement": "Every main task/seed/variant executed once",
+      "passed": true,
+      "details": {
+        "expected": 21,
+        "observed": 21
+      }
+    },
+    {
+      "requirement": "Two equal-budget validation-only candidates",
+      "passed": true,
+      "details": [
+        {
+          "offset": 0,
+          "validation_ce": 3.3498452467978614,
+          "updates": 150,
+          "worker": 0,
+          "test_used": false
+        },
+        {
+          "offset": 4,
+          "validation_ce": 3.3248668018082665,
+          "updates": 150,
+          "worker": 1,
+          "test_used": false
+        }
+      ]
+    },
+    {
+      "requirement": "Scientific update budget used exactly once",
+      "passed": true,
+      "details": 10200
+    },
+    {
+      "requirement": "worker-0 clean process exit",
+      "passed": true,
+      "details": {
+        "returncode": 0,
+        "ended_unix": 1791926719.040023
+      }
+    },
+    {
+      "requirement": "worker-0 A100 CUDA telemetry",
+      "passed": true,
+      "details": {
+        "worker": "worker-0",
+        "job_id": "5219",
+        "uuid": "27f75ca1-c8bb-be8c-3687-e60a5198bf05",
+        "name": "NVIDIA A100-SXM4-80GB",
+        "samples": 291,
+        "mean_utilization_percent": 31.580756013745706,
+        "maximum_utilization_percent": 39.0,
+        "peak_cuda_memory_bytes": 119533056,
+        "allocated_tasks": [
+          "memory-11-fixed",
+          "memory-33-trained",
+          "memory-33-fixed",
+          "memory-33-no_memory",
+          "lm-22-gru",
+          "memory-11-no_memory",
+          "lm-22-no_memory",
+          "lm-22-trained",
+          "memory-11-trained",
+          "lm-22-fixed"
+        ]
+      }
+    },
+    {
+      "requirement": "worker-1 clean process exit",
+      "passed": true,
+      "details": {
+        "returncode": 0,
+        "ended_unix": 1791927042.077433
+      }
+    },
+    {
+      "requirement": "worker-1 A100 CUDA telemetry",
+      "passed": true,
+      "details": {
+        "worker": "worker-1",
+        "job_id": "5220",
+        "uuid": "766c2b71-228e-6498-9011-64c5408bc809",
+        "name": "NVIDIA A100-SXM4-80GB",
+        "samples": 453,
+        "mean_utilization_percent": 30.838852097130243,
+        "maximum_utilization_percent": 40.0,
+        "peak_cuda_memory_bytes": 119533056,
+        "allocated_tasks": [
+          "lm-11-fixed",
+          "lm-33-fixed",
+          "lm-33-no_memory",
+          "lm-11-trained",
+          "memory-22-trained",
+          "lm-33-gru",
+          "memory-22-no_memory",
+          "lm-11-gru",
+          "lm-11-no_memory",
+          "memory-22-fixed",
+          "lm-33-trained"
+        ]
+      }
+    },
+    {
+      "requirement": "Two distinct physical A100 GPUs used",
+      "passed": true,
+      "details": [
+        {
+          "worker": "worker-0",
+          "job_id": "5219",
+          "uuid": "27f75ca1-c8bb-be8c-3687-e60a5198bf05",
+          "name": "NVIDIA A100-SXM4-80GB",
+          "samples": 291,
+          "mean_utilization_percent": 31.580756013745706,
+          "maximum_utilization_percent": 39.0,
+          "peak_cuda_memory_bytes": 119533056,
+          "allocated_tasks": [
+            "memory-11-fixed",
+            "memory-33-trained",
+            "memory-33-fixed",
+            "memory-33-no_memory",
+            "lm-22-gru",
+            "memory-11-no_memory",
+            "lm-22-no_memory",
+            "lm-22-trained",
+            "memory-11-trained",
+            "lm-22-fixed"
+          ]
+        },
+        {
+          "worker": "worker-1",
+          "job_id": "5220",
+          "uuid": "766c2b71-228e-6498-9011-64c5408bc809",
+          "name": "NVIDIA A100-SXM4-80GB",
+          "samples": 453,
+          "mean_utilization_percent": 30.838852097130243,
+          "maximum_utilization_percent": 40.0,
+          "peak_cuda_memory_bytes": 119533056,
+          "allocated_tasks": [
+            "lm-11-fixed",
+            "lm-33-fixed",
+            "lm-33-no_memory",
+            "lm-11-trained",
+            "memory-22-trained",
+            "lm-33-gru",
+            "memory-22-no_memory",
+            "lm-11-gru",
+            "lm-11-no_memory",
+            "memory-22-fixed",
+            "lm-33-trained"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement": "memory-seed-11-fixed best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "memory-seed-33-trained best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "memory-seed-33-fixed best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "memory-seed-33-no_memory best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-gru best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-gru full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-gru free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "memory-seed-11-no_memory best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-no_memory best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-no_memory full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-no_memory free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-trained best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-trained full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-trained free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "memory-seed-11-trained best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-fixed best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-fixed full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-22-fixed free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-fixed best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-fixed full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-fixed free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-fixed best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-fixed full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-fixed free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-no_memory best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-no_memory full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-no_memory free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-trained best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-trained full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-trained free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "memory-seed-22-trained best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-gru best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-gru full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-gru free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "memory-seed-22-no_memory best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-gru best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-gru full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-gru free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-no_memory best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-no_memory full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-11-no_memory free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "memory-seed-22-fixed best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-trained best/last/curve artifacts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-trained full test targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "lm-seed-33-trained free generation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "requirement": "Source bundle digest matches submission",
+      "passed": true,
+      "details": null
+    }
+  ]
+}

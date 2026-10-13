@@ -1,0 +1,7 @@
+{
+  "ce_nats": 3.1828876061773466,
+  "bpc": 4.591936165139002,
+  "accuracy": 0.16645737657864523,
+  "tokens": 55744,
+  "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "worker": 1,
+    "returncode": 1,
+    "log": "/Users/rei/Documents/spinlanguage/aic-preflight-20261014/worker-1.log"
+  },
+  {
+    "worker": 2,
+    "returncode": 1,
+    "log": "/Users/rei/Documents/spinlanguage/aic-preflight-20261014/worker-2.log"
+  }
+]

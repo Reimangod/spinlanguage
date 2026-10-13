@@ -1,0 +1,35 @@
+JOB_ID=5210 HOST=dgx-a100 CUDA_VISIBLE_DEVICES=0
+SCRATCH=/dev/shm/spinlanguage-preflight-5210-mvG2pv
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs          1008G     0 1008G   0% /dev/shm
+name, uuid, memory.total [MiB]
+NVIDIA A100-SXM4-80GB, GPU-27f75ca1-c8bb-be8c-3687-e60a5198bf05, 81920 MiB
+NVIDIA A100-SXM4-80GB, GPU-76b1ed1f-9a1d-45c2-4335-fb442226423d, 81920 MiB
+NVIDIA A100-SXM4-80GB, GPU-471c1723-0e33-90f9-13f2-3d26e0741e7b, 81920 MiB
+{
+  "job_id": "5210",
+  "hostname": "dgx-a100",
+  "cuda_visible_devices": "0",
+  "logical_device": 0,
+  "gpu_name": "NVIDIA A100-SXM4-80GB",
+  "gpu_memory_bytes": 85095874560,
+  "cuda_runtime": 12090,
+  "cuda_driver": 12080,
+  "input_sha256": "918e763af1f53a06c36eca6437b509c04f4f53c966ce0a43a8521d137a8ac2d2",
+  "source_sha256": "4fb0b452161f229d6ac176e72ae275a76725ce9e2cde67469a7c825fd366bf82",
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "qiskit": "1.0.2",
+    "cupy-cuda12x": "13.6.0"
+  },
+  "max_abs_error": 2.220446049250313e-16,
+  "sum_abs_error": 1.1641532182693481e-10,
+  "cpu_seconds": 0.027258099988102913,
+  "gpu_resident_seconds": 0.001709560863673687,
+  "gpu_transfer_inclusive_seconds": 0.004741096869111061,
+  "speedup_resident": 15.944503976025631,
+  "speedup_transfer_inclusive": 5.749323572292609,
+  "backend": "numpy CPU / cupy CUDA",
+  "benchmark": "generic float64 elementwise and reduction; not research workload"
+}

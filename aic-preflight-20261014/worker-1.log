@@ -1,0 +1,54 @@
+JOB_ID=5209 HOST=dgx-a100 CUDA_VISIBLE_DEVICES=0
+JOB_ID=5209 HOST=dgx-a100 CUDA_VISIBLE_DEVICES=0
+SCRATCH=/tmp/spinlanguage-preflight-5209-SbGSXF
+SCRATCH=/tmp/spinlanguage-preflight-5209-F747Nf
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/md0        1.8T  1.7T   16K 100% /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/md0        1.8T  1.7T   16K 100% /
+name, uuid, memory.total [MiB]
+NVIDIA A100-SXM4-80GB, GPU-766c2b71-228e-6498-9011-64c5408bc809, 81920 MiB
+NVIDIA A100-SXM4-80GB, GPU-76b1ed1f-9a1d-45c2-4335-fb442226423d, 81920 MiB
+NVIDIA A100-SXM4-80GB, GPU-471c1723-0e33-90f9-13f2-3d26e0741e7b, 81920 MiB
+name, uuid, memory.total [MiB]
+NVIDIA A100-SXM4-80GB, GPU-766c2b71-228e-6498-9011-64c5408bc809, 81920 MiB
+NVIDIA A100-SXM4-80GB, GPU-76b1ed1f-9a1d-45c2-4335-fb442226423d, 81920 MiB
+NVIDIA A100-SXM4-80GB, GPU-471c1723-0e33-90f9-13f2-3d26e0741e7b, 81920 MiB
+Traceback (most recent call last):
+  File "/tmp/spinlanguage-preflight-5209-F747Nf/probe.py", line 18, in <module>
+    gpu=cp.asnumpy(gx*gx+cp.sin(gx))
+                   ~~^~~
+  File "cupy/_core/core.pyx", line 1387, in cupy._core.core._ndarray_base.__mul__
+  File "cupy/_core/_kernel.pyx", line 1374, in cupy._core._kernel.ufunc.__call__
+  File "cupy/_core/_kernel.pyx", line 1401, in cupy._core._kernel.ufunc._get_ufunc_kernel
+  File "cupy/_core/_kernel.pyx", line 1082, in cupy._core._kernel._get_ufunc_kernel
+  File "cupy/_core/_kernel.pyx", line 94, in cupy._core._kernel._get_simple_elementwise_kernel
+  File "cupy/_core/_kernel.pyx", line 82, in cupy._core._kernel._get_simple_elementwise_kernel_from_code
+  File "cupy/_core/core.pyx", line 2377, in cupy._core.core.compile_with_cache
+  File "/share/reiwatanabe/ceo-bounded-source-20261007-v1/venv/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 536, in _compile_module_with_cache
+    return _compile_with_cache_cuda(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/reiwatanabe/ceo-bounded-source-20261007-v1/venv/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 593, in _compile_with_cache_cuda
+    os.makedirs(cache_dir, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 28] No space left on device: '/tmp/spinlanguage-preflight-5209-F747Nf/cupy-cache'
+Traceback (most recent call last):
+  File "/tmp/spinlanguage-preflight-5209-SbGSXF/probe.py", line 18, in <module>
+    gpu=cp.asnumpy(gx*gx+cp.sin(gx))
+                   ~~^~~
+  File "cupy/_core/core.pyx", line 1387, in cupy._core.core._ndarray_base.__mul__
+  File "cupy/_core/_kernel.pyx", line 1374, in cupy._core._kernel.ufunc.__call__
+  File "cupy/_core/_kernel.pyx", line 1401, in cupy._core._kernel.ufunc._get_ufunc_kernel
+  File "cupy/_core/_kernel.pyx", line 1082, in cupy._core._kernel._get_ufunc_kernel
+  File "cupy/_core/_kernel.pyx", line 94, in cupy._core._kernel._get_simple_elementwise_kernel
+  File "cupy/_core/_kernel.pyx", line 82, in cupy._core._kernel._get_simple_elementwise_kernel_from_code
+  File "cupy/_core/core.pyx", line 2377, in cupy._core.core.compile_with_cache
+  File "/share/reiwatanabe/ceo-bounded-source-20261007-v1/venv/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 536, in _compile_module_with_cache
+    return _compile_with_cache_cuda(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/reiwatanabe/ceo-bounded-source-20261007-v1/venv/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 593, in _compile_with_cache_cuda
+    os.makedirs(cache_dir, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 28] No space left on device: '/tmp/spinlanguage-preflight-5209-SbGSXF/cupy-cache'
+srun: error: dgx-a100: task 1: Exited with exit code 1
+srun: error: dgx-a100: task 0: Exited with exit code 1

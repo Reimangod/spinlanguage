@@ -1,0 +1,99 @@
+[
+  {
+    "condition": "reference",
+    "changes": {},
+    "ce_nats": 3.100618362426758,
+    "bpc": 4.473246735162342,
+    "accuracy": 0.18359375,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  },
+  {
+    "condition": "sensor_noise_001",
+    "changes": {
+      "sensor_noise_std": 0.01
+    },
+    "ce_nats": 3.1211230754852295,
+    "bpc": 4.502828783006651,
+    "accuracy": 0.17626953125,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  },
+  {
+    "condition": "sensor_noise_005",
+    "changes": {
+      "sensor_noise_std": 0.05
+    },
+    "ce_nats": 3.577289581298828,
+    "bpc": 5.160937938763576,
+    "accuracy": 0.113037109375,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  },
+  {
+    "condition": "dac_4bit",
+    "changes": {
+      "dac_bits": 4
+    },
+    "ce_nats": 3.1003165245056152,
+    "bpc": 4.472811275090358,
+    "accuracy": 0.18359375,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  },
+  {
+    "condition": "dac_8bit",
+    "changes": {
+      "dac_bits": 8
+    },
+    "ce_nats": 3.100618600845337,
+    "bpc": 4.473247079127644,
+    "accuracy": 0.18359375,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  },
+  {
+    "condition": "sensor_bandwidth_25MHz",
+    "changes": {
+      "sensor_bandwidth_Hz": 25000000.0
+    },
+    "ce_nats": 3.2022557258605957,
+    "bpc": 4.6198784553573695,
+    "accuracy": 0.150634765625,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  },
+  {
+    "condition": "thermal_300K",
+    "changes": {
+      "thermal_noise": true
+    },
+    "ce_nats": 3.100689172744751,
+    "bpc": 4.473348892856955,
+    "accuracy": 0.18359375,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  },
+  {
+    "condition": "linear_wave",
+    "changes": {
+      "nonlinear_scale": 0
+    },
+    "ce_nats": 3.1006178855895996,
+    "bpc": 4.473246047231739,
+    "accuracy": 0.18359375,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  },
+  {
+    "condition": "current_limit_half",
+    "changes": {
+      "current_limit_A": 0.2
+    },
+    "ce_nats": 3.1007611751556396,
+    "bpc": 4.473452770378076,
+    "accuracy": 0.18359375,
+    "tokens": 4096,
+    "protocol": "nonoverlapping windows; causal next character; state resets at window start"
+  }
+]

@@ -1,0 +1,63 @@
+JOB_ID=5218 HOST=dgx-a100 CUDA_VISIBLE_DEVICES=0
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs          1008G  5.1G 1003G   1% /dev/shm
+index, uuid, name, memory.total [MiB], pci.bus_id
+0, GPU-766c2b71-228e-6498-9011-64c5408bc809, NVIDIA A100-SXM4-80GB, 81920 MiB, 00000000:87:00.0
+1, GPU-76b1ed1f-9a1d-45c2-4335-fb442226423d, NVIDIA A100-SXM4-80GB, 81920 MiB, 00000000:B7:00.0
+2, GPU-471c1723-0e33-90f9-13f2-3d26e0741e7b, NVIDIA A100-SXM4-80GB, 81920 MiB, 00000000:BD:00.0
+MONITOR_BEGIN
+..........                                                               [100%]
+10 passed in 1.77s
+
+{
+  "gpu_name": "NVIDIA A100-SXM4-80GB",
+  "gpu_uuid": "766c2b71-228e-6498-9011-64c5408bc809",
+  "torch_version": "2.5.1+cu124",
+  "torch_cuda": "12.4",
+  "cuda_available": true,
+  "peak_cuda_memory_bytes": 106665472,
+  "cpu_seconds": 0.34456272330135107,
+  "gpu_seconds": 0.30367218144237995,
+  "speedup": 1.1346535651199576,
+  "feature_max_abs_error": 4.082918167114258e-06,
+  "gradient_max_abs_error": 1.2776581570506096e-08,
+  "action_norm_relative_error": 2.356437653361354e-05,
+  "timestep_relative_state_error_vs_64": {
+    "8": 0.00935694482177496,
+    "16": 0.0022870374377816916,
+    "32": 0.00045767927076667547
+  },
+  "physics_config": {
+    "cells": 32,
+    "cell_spacing_m": 2.5e-05,
+    "film_thickness_m": 1e-06,
+    "waveguide_width_m": 5e-05,
+    "saturation_magnetization_A_m": 140000.0,
+    "exchange_J_m": 3.5e-12,
+    "gyromagnetic_rad_s_T": 176085900000.0,
+    "bias_T": 0.35,
+    "gilbert_alpha": 0.0002,
+    "token_duration_s": 8e-09,
+    "substeps": 8,
+    "control_coils": 8,
+    "current_limit_A": 0.4,
+    "field_gain_T_A": 0.005,
+    "coil_width_m": 7.5e-05,
+    "dac_bits": 0,
+    "input_ports": 4,
+    "input_field_limit_T": 5e-06,
+    "input_bandwidth_Hz": 200000000.0,
+    "sensor_ports": 4,
+    "sensor_width_m": 2.5e-05,
+    "sensor_bandwidth_Hz": 100000000.0,
+    "samples_per_token": 2,
+    "sensor_scale": 100.0,
+    "sensor_noise_std": 0.0,
+    "temperature_K": 300.0,
+    "thermal_noise": false,
+    "nonlinear_scale": 1.0,
+    "port_offset_cells": 0
+  },
+  "approximation_gate": "must review timestep error before science; no automatic pass from CUDA visibility"
+}
+ARTIFACT_RECEIVED bytes=1341 sha256=681811e6667bc43e2a45506385db7a499cad3503657724f9af0e3ccf2a2a2b41

@@ -1,0 +1,9 @@
+.venv*/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pt
+results/*/source.tar.gz
+third_party/
+data/tinyshakespeare.txt
+magnonic-lm-mvp-v1.zip

@@ -1,0 +1,11 @@
+{
+  "unigram_ce": 3.3619913297817448,
+  "bigram_ce": 2.4948077845393293,
+  "tokens": 55744,
+  "unigram_bpc": 4.850328218987815,
+  "bigram_bpc": 3.5992468187260718,
+  "smoothing": 0.1,
+  "backend": "Python CPU counts",
+  "data": "full training split; same nonoverlapping test windows",
+  "interpretation": "diagnostic digital comparison with direct token access, not a physical reservoir"
+}

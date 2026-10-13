@@ -1,0 +1,74 @@
+{
+  "language": {
+    "fixed": {
+      "n": 3,
+      "ce_mean": 3.201176476578944,
+      "ce_sd": 0.02540864597219817,
+      "bpc_mean": 4.618321427770848,
+      "seeds": [
+        22,
+        11,
+        33
+      ],
+      "parameters_total": 1113,
+      "readout_parameters": 1105
+    },
+    "trained": {
+      "n": 3,
+      "ce_mean": 3.2047012042962773,
+      "ce_sd": 0.036075483438386464,
+      "bpc_mean": 4.623406534969128,
+      "seeds": [
+        22,
+        11,
+        33
+      ],
+      "parameters_total": 1113,
+      "readout_parameters": 1105
+    },
+    "no_memory": {
+      "n": 3,
+      "ce_mean": 3.11893168528601,
+      "ce_sd": 0.01728375294029646,
+      "bpc_mean": 4.499667275233584,
+      "seeds": [
+        22,
+        33,
+        11
+      ],
+      "parameters_total": 1113,
+      "readout_parameters": 1105
+    },
+    "gru": {
+      "n": 3,
+      "ce_mean": 2.289583465307552,
+      "ce_sd": 0.005780287613624015,
+      "bpc_mean": 3.3031707111005733,
+      "seeds": [
+        22,
+        33,
+        11
+      ],
+      "parameters_total": 2385,
+      "readout_parameters": 585
+    }
+  },
+  "paired": [
+    {
+      "seed": 11,
+      "ce_trained_minus_fixed": 0.01600186230805134
+    },
+    {
+      "seed": 22,
+      "ce_trained_minus_fixed": -0.0021564820877584268
+    },
+    {
+      "seed": 33,
+      "ce_trained_minus_fixed": -0.0032711970682943736
+    }
+  ],
+  "completion": {
+    "lm_runs": 12,
+    "memory_runs": 9
+  }
+}

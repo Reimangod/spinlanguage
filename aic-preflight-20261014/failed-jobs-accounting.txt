@@ -1,0 +1,8 @@
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+JobID             State ExitCode  AllocTRES 
+------------ ---------- -------- ---------- 
+5208             FAILED      1:0 billing=2+ 
+5208.0           FAILED      1:0 cpu=2,gre+ 
+5209             FAILED      1:0 billing=2+ 
+5209.0           FAILED      1:0 cpu=2,gre+ 
+bash: line 1: rg: command not found

@@ -1,0 +1,32 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "ssh",
+    "-p",
+    "2222",
+    "-i",
+    "/Users/rei/.ssh/id_ed25519",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=20",
+    "-o",
+    "ProxyCommand=ssh -p 2222 -i /Users/rei/.ssh/id_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 -W %h:%p reiwatanabe@casper.ai.hc.keio.ac.jp",
+    "reiwatanabe@172.16.0.18",
+    "srun --partition=gpu-strong --ntasks=1 --gres=gpu:a100:1 --cpus-per-task=2 --mem=16G --time=00:20:00 --job-name=magnonic-preflight-w0 --unbuffered bash -s"
+  ],
+  "source_bundle_sha256": "33bb0e294714883e7a812744fc6f86ba52bdc22811c6db1baa34d0fe7e19c3e2",
+  "script_sha256": "830a27be07d94591a5aec1c1466c2449c0b096ba773c4ad158ac8f9b3b1b9e0c",
+  "directory": "/dev/shm/rei-magnonic-lm-20261014-v1/preflight-20261014-061230-worker-0",
+  "phase": "preflight",
+  "worker": 0,
+  "wall": "00:20:00",
+  "output_destination": "/Users/rei/Documents/spinlanguage/results/preflight-20261014-061230/worker-0",
+  "started_unix": 1791925950.094493,
+  "job_id": "5218"
+}

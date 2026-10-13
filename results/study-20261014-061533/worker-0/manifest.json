@@ -1,0 +1,32 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "ssh",
+    "-p",
+    "2222",
+    "-i",
+    "/Users/rei/.ssh/id_ed25519",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=20",
+    "-o",
+    "ProxyCommand=ssh -p 2222 -i /Users/rei/.ssh/id_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 -W %h:%p reiwatanabe@casper.ai.hc.keio.ac.jp",
+    "reiwatanabe@172.16.0.18",
+    "srun --partition=gpu-strong --ntasks=1 --gres=gpu:a100:1 --cpus-per-task=2 --mem=16G --time=02:00:00 --job-name=magnonic-study-w0 --unbuffered bash -s"
+  ],
+  "source_bundle_sha256": "365abf2cb5412b5b42e42c2586171edb8f8db7539abcf2be477cdcc75943bd9a",
+  "script_sha256": "d3d2341a3b5d15eb618484cccb9d33bf772f3206ec3489950e540223a450f7fc",
+  "directory": "/dev/shm/rei-magnonic-lm-20261014-v1/study-20261014-061533-worker-0",
+  "phase": "study",
+  "worker": 0,
+  "wall": "02:00:00",
+  "output_destination": "/Users/rei/Documents/spinlanguage/results/study-20261014-061533/worker-0",
+  "started_unix": 1791926133.7893991,
+  "job_id": "5219"
+}

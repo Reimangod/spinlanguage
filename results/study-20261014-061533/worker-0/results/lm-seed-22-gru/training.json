@@ -1,0 +1,14 @@
+{
+  "updates": 600,
+  "best_update": 600,
+  "best_validation_ce": 2.285181529486357,
+  "training_seconds": 1.5995362335816026,
+  "peak_gpu_memory_bytes": 70016000,
+  "parameters_total": 2385,
+  "parameters_trainable": 2385,
+  "readout_parameters": 585,
+  "training_tokens": 9830400,
+  "backend": "PyTorch CUDA float32 / complex64",
+  "reset": "each independent training window/recall example",
+  "bptt_cut": "window length; no history carry between randomly sampled windows"
+}

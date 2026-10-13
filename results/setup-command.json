@@ -1,0 +1,25 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "ssh",
+    "-p",
+    "2222",
+    "-i",
+    "/Users/rei/.ssh/id_ed25519",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=20",
+    "-o",
+    "ProxyCommand=ssh -p 2222 -i /Users/rei/.ssh/id_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 -W %h:%p reiwatanabe@casper.ai.hc.keio.ac.jp",
+    "reiwatanabe@172.16.0.18",
+    "srun --partition=gpu-standard --ntasks=1 --gres=gpu:a100:1 --cpus-per-task=2 --mem=24G --time=00:30:00 --job-name=magnonic-env-setup --unbuffered bash -s"
+  ],
+  "script": "set -eu\necho \"SETUP_JOB=$SLURM_JOB_ID HOST=$(hostname)\"\ntest ! -e /dev/shm/rei-magnonic-lm-20261014-v1\nmkdir -m 700 /dev/shm/rei-magnonic-lm-20261014-v1\nexport TMPDIR=/dev/shm/rei-magnonic-lm-20261014-v1\ndf -h /dev/shm\ntest \"$(df -B1 --output=avail /dev/shm | tail -1)\" -gt 12884901888\n/share/reiwatanabe/ceo-bounded-source-20261007-v1/venv/bin/python -m pip install --no-cache-dir --target /dev/shm/rei-magnonic-lm-20261014-v1/site torch==2.5.1 --index-url https://download.pytorch.org/whl/cu124\nexport PYTHONPATH=/dev/shm/rei-magnonic-lm-20261014-v1/site\nexport OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\n/share/reiwatanabe/ceo-bounded-source-20261007-v1/venv/bin/python -c 'import torch; print(torch.__version__,torch.version.cuda,torch.cuda.is_available()); print(torch.cuda.get_device_properties(0)); print((torch.ones(1000000,device=\"cuda\")**2).sum().item())'\ntouch /dev/shm/rei-magnonic-lm-20261014-v1/environment-ready\ndu -sh /dev/shm/rei-magnonic-lm-20261014-v1\n",
+  "remote_directory": "/dev/shm/rei-magnonic-lm-20261014-v1"
+}

@@ -1,0 +1,85 @@
+nadeko
+PARTITION AVAIL TIMELIMIT NODES GRES STATE
+gpu-short* up 1:00:00 1 gpu:a100:6(S:0-1) idle
+gpu-standard up 1-00:00:00 1 gpu:a100:6(S:0-1) idle
+gpu-strong up 1-12:00:00 1 gpu:a100:6(S:0-1) idle
+gpu-interactive up 2:00:00 1 gpu:a100:6(S:0-1) idle
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+JobID                                     JobName      State ExitCode               Start                 End                                                                        AllocTRES 
+------------ ------------------------------------ ---------- -------- ------------------- ------------------- -------------------------------------------------------------------------------- 
+5208                     spinlanguage-preflight-2     FAILED      1:0 2026-10-14T05:57:09 2026-10-14T05:57:11                                         billing=2,cpu=2,gres/gpu=1,mem=2G,node=1 
+5208.0                   spinlanguage-preflight-2     FAILED      1:0 2026-10-14T05:57:09 2026-10-14T05:57:11                                                   cpu=2,gres/gpu=1,mem=2G,node=1 
+5209                     spinlanguage-preflight-1     FAILED      1:0 2026-10-14T05:57:09 2026-10-14T05:57:12                                         billing=2,cpu=2,gres/gpu=1,mem=2G,node=1 
+5209.0                   spinlanguage-preflight-1     FAILED      1:0 2026-10-14T05:57:09 2026-10-14T05:57:12                                                   cpu=2,gres/gpu=1,mem=2G,node=1 
+5210                  spinlanguage-preflight-1-v2  COMPLETED      0:0 2026-10-14T05:57:38 2026-10-14T05:57:41                                         billing=2,cpu=2,gres/gpu=1,mem=2G,node=1 
+5210.0                spinlanguage-preflight-1-v2  COMPLETED      0:0 2026-10-14T05:57:38 2026-10-14T05:57:41                                                   cpu=1,gres/gpu=1,mem=2G,node=1 
+5211                  spinlanguage-preflight-2-v2  COMPLETED      0:0 2026-10-14T05:57:38 2026-10-14T05:57:40                                         billing=2,cpu=2,gres/gpu=1,mem=2G,node=1 
+5211.0                spinlanguage-preflight-2-v2  COMPLETED      0:0 2026-10-14T05:57:38 2026-10-14T05:57:40                                                   cpu=1,gres/gpu=1,mem=2G,node=1 
+PartitionName=gpu-short
+   AllowGroups=slurm-users AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=YES QoS=gpu-short-qos
+   DefaultTime=00:30:00 DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=01:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=8 MaxCPUsPerSocket=UNLIMITED
+   Nodes=dgx-a100
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=256 TotalNodes=1 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=256000 MaxMemPerNode=512000
+   TRES=cpu=256,mem=2064000M,node=1,billing=256,gres/gpu=6
+
+Name|MaxWall|MaxJobsPU|MaxSubmitPU|MaxTRESPU
+gpu-short-qos||||
+Filesystem                         Size  Used Avail Use% Mounted on
+172.16.0.30:/share                 1.8T  1.7T     0 100% /share
+/dev/mapper/ubuntu--vg-ubuntu--lv  913G  681G  186G  79% /
+attrs==26.1.0
+certifi==2026.7.22
+charset-normalizer==3.5.2
+cirq-core==1.6.1
+contourpy==1.3.3
+cupy-cuda12x==13.6.0
+cycler==0.12.1
+deprecation==2.1.0
+dill==0.4.1
+duet==0.2.9
+fastrlock==0.8.3
+fonttools==4.66.1
+h5py==3.16.0
+idna==3.20
+iniconfig==2.3.1
+kiwisolver==1.5.1
+matplotlib==3.11.0
+mpmath==1.3.0
+networkx==3.7
+numpy==1.26.4
+nvidia-cuda-nvrtc-cu12==12.6.85
+nvidia-cuda-runtime-cu12==12.6.77
+openfermion==1.6.1
+openfermionpyscf==0.5
+packaging==26.3
+pandas==2.3.3
+pillow==12.3.0
+pluggy==1.6.0
+psutil==7.2.2
+PubChemPy==1.0.5
+Pygments==2.21.0
+pyparsing==3.3.3
+pyscf==2.6.0
+pytest==9.1.1
+python-dateutil==2.9.0.post0
+pytz==2026.5
+qiskit==1.0.2
+requests==2.34.2
+rustworkx==0.18.1
+scipy==1.13.1
+setuptools==84.0.0
+six==1.17.0
+sortedcontainers==2.4.0
+stevedore==5.9.1
+symengine==0.14.1
+sympy==1.14.0
+tqdm==4.70.1
+typing_extensions==4.16.0
+tzdata==2026.5
+urllib3==2.8.0

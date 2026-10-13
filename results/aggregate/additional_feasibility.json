@@ -1,0 +1,70 @@
+[
+  {
+    "variant": "fixed",
+    "seed": 11,
+    "reference_ce": 3.2219488620758057,
+    "conditions": [
+      {
+        "condition": "two_sensors",
+        "ce_nats": 3.287322521209717,
+        "delta_ce": 0.06537365913391113
+      },
+      {
+        "condition": "coil_gain_drift_plus_5pct",
+        "ce_nats": 3.2214608192443848,
+        "delta_ce": -0.00048804283142089844
+      },
+      {
+        "condition": "coil_gain_drift_minus_5pct",
+        "ce_nats": 3.2226967811584473,
+        "delta_ce": 0.0007479190826416016
+      },
+      {
+        "condition": "extra_coil_crosstalk_10pct",
+        "ce_nats": 3.222602128982544,
+        "delta_ce": 0.0006532669067382812
+      },
+      {
+        "condition": "half_timestep",
+        "ce_nats": 3.221869707107544,
+        "delta_ce": -7.915496826171875e-05
+      }
+    ],
+    "backend": "PyTorch CPU",
+    "context": "128 fixed test windows; evaluation only, not model selection; sensor removal has no readout refit"
+  },
+  {
+    "variant": "trained",
+    "seed": 11,
+    "reference_ce": 3.239783525466919,
+    "conditions": [
+      {
+        "condition": "two_sensors",
+        "ce_nats": 3.302471399307251,
+        "delta_ce": 0.06268787384033203
+      },
+      {
+        "condition": "coil_gain_drift_plus_5pct",
+        "ce_nats": 3.242155075073242,
+        "delta_ce": 0.002371549606323242
+      },
+      {
+        "condition": "coil_gain_drift_minus_5pct",
+        "ce_nats": 3.2385177612304688,
+        "delta_ce": -0.0012657642364501953
+      },
+      {
+        "condition": "extra_coil_crosstalk_10pct",
+        "ce_nats": 3.237273693084717,
+        "delta_ce": -0.0025098323822021484
+      },
+      {
+        "condition": "half_timestep",
+        "ce_nats": 3.2397663593292236,
+        "delta_ce": -1.71661376953125e-05
+      }
+    ],
+    "backend": "PyTorch CPU",
+    "context": "128 fixed test windows; evaluation only, not model selection; sensor removal has no readout refit"
+  }
+]

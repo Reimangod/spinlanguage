@@ -1,0 +1,33 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "ssh",
+    "-p",
+    "2222",
+    "-i",
+    "/Users/rei/.ssh/id_ed25519",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=20",
+    "-o",
+    "ProxyCommand=ssh -p 2222 -i /Users/rei/.ssh/id_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 -W %h:%p reiwatanabe@casper.ai.hc.keio.ac.jp",
+    "reiwatanabe@172.16.0.18",
+    "srun --immediate=30 --partition=gpu-short --ntasks=1 --gres=gpu:a100:6 --cpus-per-task=1 --mem=4G --time=00:03:00 --job-name=spinlanguage-six-gpu-test --unbuffered bash -s"
+  ],
+  "source_sha256": "8c792ecc4bbcf1d963a4b99fa897eaa598d1cb3d9f78a0fa2b3883b2522daf12",
+  "script_sha256": "a71d6a02348d9108c15a8b231358067e0a01b9258769d57e9ed1cf0ce2fce4b8",
+  "gpu_count": 6,
+  "max_jobs": 1,
+  "wall_limit_seconds": 180,
+  "allocation_wait_limit_seconds": 30,
+  "repeats_per_device": 20,
+  "output_destination": "/Users/rei/Documents/spinlanguage/aic-preflight-20261014/six-gpu",
+  "research_budget_used": 0,
+  "purpose": "user-authorized six-GPU infrastructure test"
+}

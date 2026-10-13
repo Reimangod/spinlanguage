@@ -1,0 +1,67 @@
+Name|MaxTRESPU|MaxTRESPA|MaxTRES|GrpTRES|MaxJobsPU|MaxSubmitPU
+normal|gres/gpu=2|||||
+gpu-short-qos||||||
+gpu-standard-qos||||||
+gpu-strong-qos||||||
+gpu-interactive-qos|gres/gpu=1|||gres/gpu=4||
+Cluster|Account|User|Partition|QOS|Def QOS|GrpTRES
+dgx-cluster|aic-trial-users|reiwatanabe||normal||
+PartitionName=gpu-short
+   AllowGroups=slurm-users AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=YES QoS=gpu-short-qos
+   DefaultTime=00:30:00 DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=01:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=8 MaxCPUsPerSocket=UNLIMITED
+   Nodes=dgx-a100
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=256 TotalNodes=1 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=256000 MaxMemPerNode=512000
+   TRES=cpu=256,mem=2064000M,node=1,billing=256,gres/gpu=6
+
+PartitionName=gpu-standard
+   AllowGroups=slurm-users AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=NO QoS=gpu-standard-qos
+   DefaultTime=12:00:00 DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=1-00:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=32 MaxCPUsPerSocket=UNLIMITED
+   Nodes=dgx-a100
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=256 TotalNodes=1 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=512000 MaxMemPerNode=1024000
+   TRES=cpu=256,mem=2064000M,node=1,billing=256,gres/gpu=6
+
+PartitionName=gpu-strong
+   AllowGroups=slurm-users AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=NO QoS=gpu-strong-qos
+   DefaultTime=18:00:00 DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=1-12:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=64 MaxCPUsPerSocket=UNLIMITED
+   Nodes=dgx-a100
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=256 TotalNodes=1 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=1024000 MaxMemPerNode=2048000
+   TRES=cpu=256,mem=2064000M,node=1,billing=256,gres/gpu=6
+
+PartitionName=gpu-interactive
+   AllowGroups=slurm-users AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=NO QoS=gpu-interactive-qos
+   DefaultTime=01:00:00 DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=02:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=16 MaxCPUsPerSocket=UNLIMITED
+   Nodes=dgx-a100
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=256 TotalNodes=1 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=256000 MaxMemPerNode=512000
+   TRES=cpu=256,mem=2064000M,node=1,billing=256,gres/gpu=6
+
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+JobID                                     JobName      State                                                                        AllocTRES 
+------------ ------------------------------------ ---------- -------------------------------------------------------------------------------- 
+5208                     spinlanguage-preflight-2     FAILED                                         billing=2,cpu=2,gres/gpu=1,mem=2G,node=1 
+5209                     spinlanguage-preflight-1     FAILED                                         billing=2,cpu=2,gres/gpu=1,mem=2G,node=1 
+5210                  spinlanguage-preflight-1-v2  COMPLETED                                         billing=2,cpu=2,gres/gpu=1,mem=2G,node=1 
+5211                  spinlanguage-preflight-2-v2  COMPLETED                                         billing=2,cpu=2,gres/gpu=1,mem=2G,node=1 

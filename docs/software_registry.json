@@ -1,0 +1,279 @@
+[
+  {
+    "supplied_url": "https://github.com/NVlabs/GatedDeltaNet-2",
+    "canonical_url": "https://github.com/NVlabs/GatedDeltaNet-2",
+    "public": true,
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "default_branch": "main",
+    "description": "Official PyTorch Implementation of Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "de8476de0fecae08fc16f0bf3154900244c61c73"
+  },
+  {
+    "supplied_url": "https://github.com/OSJL-py/PRCpy",
+    "canonical_url": "https://github.com/OSJL-py/PRCpy",
+    "public": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "description": "Simple modular python package for physical reservoir computing. Use your own experimental data.",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "bb0f48bc85c7f6901ee9ef2dc8ce6509557d9cbe"
+  },
+  {
+    "supplied_url": "https://github.com/a-papp/SpinTorch",
+    "canonical_url": "https://github.com/a-papp/SpinTorch",
+    "public": true,
+    "license": null,
+    "default_branch": "main",
+    "description": "Micromagnetic simulator with machine-learning capabilities.",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "93e9c884d6cff7ccb3daccf7b818fbf6f82ddf92"
+  },
+  {
+    "supplied_url": "https://github.com/facebook/Ax",
+    "canonical_url": "https://github.com/facebook/Ax",
+    "public": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "description": "Adaptive Experimentation Platform",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "f4e58e05f9e888cc70da28ef02df9e755b38f985"
+  },
+  {
+    "supplied_url": "https://github.com/facebookresearch/nevergrad",
+    "canonical_url": "https://github.com/facebookresearch/nevergrad",
+    "public": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "description": "A Python toolbox for performing gradient-free optimization",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "55950f950b0acd08c4733bc6bf36bbc650e7f089"
+  },
+  {
+    "supplied_url": "https://github.com/fekoester/LAERC",
+    "canonical_url": "https://github.com/fekoester/LAERC",
+    "public": true,
+    "license": null,
+    "default_branch": "main",
+    "description": "Repository for Layered Attention-Enhanced Reservoir Computer (LAERC) trained on the OpenWebTxt data set with GPT2 tokenization.",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "db12fe147430395a35e39beffc2d22a7d282f551"
+  },
+  {
+    "supplied_url": "https://github.com/fekoester/Shakespeare_Res",
+    "canonical_url": "https://github.com/fekoester/Shakespeare_Res",
+    "public": true,
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "default_branch": "main",
+    "description": "A reservoir based small LLM for shakespeare character level prediction",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "a8b1202a3bd57aabd26ebc5b37d04b8cb30aa5f3"
+  },
+  {
+    "supplied_url": "https://github.com/karpathy/nanoGPT",
+    "canonical_url": "https://github.com/karpathy/nanoGPT",
+    "public": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "master",
+    "description": "The simplest, fastest repository for training/finetuning medium-sized GPTs.",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291"
+  },
+  {
+    "supplied_url": "https://github.com/mumax/3",
+    "canonical_url": "https://github.com/mumax/3",
+    "public": true,
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "default_branch": "master",
+    "description": "GPU-accelerated micromagnetic simulator",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "f284051153d1513523043fe42654e283c6e21464"
+  },
+  {
+    "supplied_url": "https://github.com/mumax/Hotspice",
+    "canonical_url": "https://github.com/mumax/Hotspice",
+    "public": true,
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "spdx_id": "GPL-3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0",
+      "node_id": "MDc6TGljZW5zZTk="
+    },
+    "default_branch": "main",
+    "description": "Test tool for thermal active artificial spin ices.",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "85f7f53743a316d9f84bf3c5c810de48348a285b"
+  },
+  {
+    "supplied_url": "https://github.com/mumax/plus",
+    "canonical_url": "https://github.com/mumax/plus",
+    "public": true,
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "spdx_id": "GPL-3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0",
+      "node_id": "MDc6TGljZW5zZTk="
+    },
+    "default_branch": "master",
+    "description": "More versatile and extensible GPU-accelerated micromagnetic simulator",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "14fa37691b247ec4f7eb7f3a0a2fa87810a3b5ea"
+  },
+  {
+    "supplied_url": "https://github.com/optuna/optuna",
+    "canonical_url": "https://github.com/optuna/optuna",
+    "public": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "master",
+    "description": "A hyperparameter optimization framework",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "988b115a8fc7e4897dc85b3e28b8cbb8be39fcd1"
+  },
+  {
+    "supplied_url": "https://github.com/pytorch/botorch",
+    "canonical_url": "https://github.com/meta-pytorch/botorch",
+    "public": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "description": "Bayesian optimization in PyTorch",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "da00e04015c0118f1b9383f32cab17bdcc0944ff"
+  },
+  {
+    "supplied_url": "https://github.com/reservoirpy/reservoirpy",
+    "canonical_url": "https://github.com/reservoirpy/reservoirpy",
+    "public": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "master",
+    "description": "A simple and flexible code for Reservoir Computing architectures like Echo State Networks",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "1fc11351bfba7f4b9a35464a1b99d804a5d6ccea"
+  },
+  {
+    "supplied_url": "https://github.com/state-spaces/mamba",
+    "canonical_url": "https://github.com/state-spaces/mamba",
+    "public": true,
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "default_branch": "main",
+    "description": "Mamba SSM architecture",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "e9594ce1c732d97440f0332fdc43170a2294dbfa"
+  },
+  {
+    "supplied_url": "https://github.com/state-spaces/s4",
+    "canonical_url": "https://github.com/state-spaces/s4",
+    "public": true,
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "default_branch": "main",
+    "description": "Structured state space sequence models",
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "e757cef57d89e448c413de7325ed5601aceaac13"
+  },
+  {
+    "supplied_url": "https://github.com/utinclab/Stochastic_MTJ_Model",
+    "canonical_url": "https://github.com/utinclab/Stochastic_MTJ_Model",
+    "public": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "description": null,
+    "status": "official repository metadata retrieved",
+    "compatibility": "not installed or tested; only selected PyTorch runtime used",
+    "head_sha": "6393dbef54fb65d6eb7d4e53ab10fed9e5b3c78f"
+  }
+]
