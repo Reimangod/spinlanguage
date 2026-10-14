@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#123c3c">
+  <meta name="description" content="YIGマグノニック文字言語モデルの学習済みWeightで、続きを生成し固定Reservoirと比較する研究プレイグラウンド。">
+  <title>Spinlanguage — LM Lab</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23123c3c'/%3E%3Cpath d='M4 16q4-12 8 0t8 0t8 0' fill='none' stroke='%239ce6bf' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+  <svg class="icon-defs" aria-hidden="true"><defs>
+    <symbol id="play" viewBox="0 0 20 20"><path d="m7 4 9 6-9 6z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 20 20"><path d="M4 10h12m-5-5 5 5-5 5"/></symbol>
+    <symbol id="copy" viewBox="0 0 20 20"><rect x="7" y="7" width="9" height="10" rx="2"/><path d="M12 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 20 20"><path d="M10 3v10m-4-4 4 4 4-4M4 13v4h12v-4"/></symbol>
+    <symbol id="external" viewBox="0 0 20 20"><path d="M11 3h6v6M17 3l-9 9M8 4H4v12h12v-4"/></symbol>
+  </defs></svg>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Spinlanguage ホーム"><span class="brand-mark"><svg viewBox="0 0 40 32"><path d="M2 16q6-16 12 0t12 0t12 0"/></svg></span><span>spinlanguage<span class="brand-divider">/</span><b>LM LAB</b></span></a>
+      <div class="top-actions"><span class="runtime-badge"><i></i> 学習済みモデルをブラウザで実行</span><a href="https://github.com/Reimangod/spinlanguage" target="_blank" rel="noopener" class="source-link">Source <svg><use href="#external"/></svg></a></div>
+    </header>
+    <main>
+      <section class="intro">
+        <div><p class="eyebrow">MAGNONIC LANGUAGE MODEL / MVP 01</p><h1>波の記憶で、<span>続きを書く。</span></h1><p class="intro-copy">YIGを想定した縮約モデルの、小さな文字言語モデル。<br class="desktop-break">学習済みWeightで生成し、固定Reservoirとの違いを試せます。</p><p class="simulation-note">ブラウザCPUでの数値推論です。実機YIGでの動作は未検証です。</p></div>
+        <div class="intro-wave" aria-hidden="true"><svg viewBox="0 0 320 120"><defs><linearGradient id="waveFade"><stop stop-color="#a9cec0"/><stop offset="1" stop-color="#467b6e"/></linearGradient></defs><path d="M0 60h320" class="axis"/><path d="M0 60q16-7 32 0t32 0q16-19 32 0t32 0q16-40 32 0t32 0q16-54 32 0t32 0q16-33 32 0t32 0"/><path d="M0 60q16 5 32 0t32 0q16 14 32 0t32 0q16 31 32 0t32 0q16 43 32 0t32 0q16 25 32 0t32 0" class="second"/></svg><span>32 spatial states · 8 internal weights</span></div>
+      </section>
+
+      <section class="lab-grid" aria-label="言語モデルの生成ラボ">
+        <aside class="control-card">
+          <div class="section-heading"><span class="step-number">01</span><h2>生成を設定</h2><span class="small-label">LIVE MODEL</span></div>
+          <form id="generate-form">
+            <fieldset class="model-field"><legend>モデル</legend><div class="model-tabs" role="group" aria-label="モデルを選択">
+              <button type="button" data-variant="trained" class="active" aria-pressed="true">内部Weight学習</button><button type="button" data-variant="fixed" aria-pressed="false">固定Reservoir</button><button type="button" data-variant="no_memory" aria-pressed="false">記憶なし</button><button type="button" data-variant="gru" aria-pressed="false">小GRU</button>
+            </div></fieldset>
+            <div class="control-row"><label for="checkpoint-seed">学習Seed</label><select id="checkpoint-seed"><option value="11">11</option><option value="22">22</option><option value="33">33</option></select></div>
+            <div class="prompt-heading"><label for="prompt">書き出し</label><span id="prompt-count">15文字</span></div>
+            <textarea id="prompt" rows="5" maxlength="512" spellcheck="false" aria-describedby="prompt-help">First Citizen:
+</textarea>
+            <p id="prompt-help" class="field-help">学習語彙は英字・改行など65文字。日本語は入力できません。</p>
+            <div class="prompt-examples" aria-label="書き出し例"><button type="button" data-prompt="citizen">First Citizen</button><button type="button" data-prompt="romeo">ROMEO</button><button type="button" data-prompt="tobe">To be…</button></div>
+            <div class="slider-label"><label for="characters">生成する文字数</label><output id="characters-value">240</output></div>
+            <input type="range" id="characters" min="40" max="800" step="40" value="240">
+            <div class="slider-endpoints"><span>40</span><span>800文字</span></div>
+            <div class="slider-label"><label for="temperature">Temperature</label><output id="temperature-value">0.80</output></div>
+            <input type="range" id="temperature" min="0.1" max="1.5" step="0.05" value="0.8">
+            <div class="slider-endpoints"><span>安定した選択</span><span>多様な選択</span></div>
+            <details class="advanced"><summary>サンプリングの詳細<span>＋</span></summary><div class="advanced-content"><div class="control-row"><label for="random-seed">生成Seed</label><input id="random-seed" type="number" min="0" max="4294967295" step="1" value="42"></div><div class="control-row"><label for="top-k">Top-k</label><select id="top-k"><option value="0">全65文字</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></div><label class="check-label"><input id="greedy" type="checkbox"> 最も確率の高い文字を選ぶ</label></div></details>
+            <label class="compare-switch"><input id="compare" type="checkbox" checked><span class="switch-track"></span><span>固定版と並べて比較</span></label>
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+            <button id="generate-button" class="primary-button" type="submit" disabled><svg><use href="#play"/></svg><span>モデルを読み込み中</span><kbd>⌘ ↵</kbd></button>
+          </form>
+          <div class="checkpoint-info"><span>選択中のcheckpoint</span><div><b id="checkpoint-name">trained · seed 11</b><span id="checkpoint-update">600 updates</span></div><p>ブラウザ内で推論します。入力文はサーバーへ送信しません。</p></div>
+        </aside>
+
+        <div class="workspace">
+          <section class="output-panel">
+            <div class="section-heading"><span class="step-number">02</span><h2>生成結果</h2><span id="run-status" class="status-label" aria-live="polite">読み込み中</span></div>
+            <div class="output-toolbar"><div class="active-model"><span class="model-dot"></span><strong id="output-label">内部Weight学習</strong><span id="output-seed">SEED 11</span></div><div class="icon-actions"><button id="copy-primary" type="button" aria-label="生成結果をコピー" title="コピー" disabled><svg><use href="#copy"/></svg></button><button id="download" type="button" aria-label="生成結果と設定をダウンロード" title="JSONを保存" disabled><svg><use href="#icon-download"/></svg></button><button id="stop" type="button" hidden>停止</button></div></div>
+            <div class="output-body" id="output-container"><div class="empty-state" id="empty-primary"><div class="empty-wave" aria-hidden="true">∿</div><h3>最初の一文から、試してみる。</h3><p>書き出しを入力して「続きを生成」を押すと、<br>モデルが次の文字を一つずつ選びます。</p><button type="button" id="start-example">この書き出しで試す <svg><use href="#arrow"/></svg></button></div><pre id="output-primary" hidden><span class="prompt-prefix"></span><span class="generated-text"></span><span class="text-caret" hidden></span></pre></div>
+            <div class="output-footer"><span id="primary-progress">0 / 240文字</span><div class="progress-track"><i id="progress-bar"></i></div><span id="primary-speed">— char/s</span></div>
+          </section>
+          <section class="comparison-panel" id="comparison-panel"><div class="output-toolbar"><div class="active-model"><span class="model-dot muted"></span><strong id="comparison-label">固定Reservoir</strong><span id="comparison-seed">SEED 11</span></div><div class="comparison-tag">同じ書き出し・生成条件</div></div><div class="comparison-body"><p class="comparison-empty" id="empty-comparison">同じ条件で生成して、内部Weight学習の違いを見比べます。</p><pre id="output-comparison" hidden><span class="prompt-prefix"></span><span class="generated-text"></span></pre></div><div class="comparison-footer"><span id="comparison-progress">比較待ち</span><span id="comparison-speed">— char/s</span></div></section>
+          <section class="state-panel"><div><p class="eyebrow">RESERVOIR STATE</p><h3 id="state-heading">波動状態をのぞく</h3><p id="state-description">生成中の空間32点の振幅。Readoutへ渡るのはアンテナ観測だけです。</p></div><canvas id="state-canvas" width="900" height="130" aria-label="推論中の波動振幅の可視化"></canvas><div class="state-legend"><span id="state-legend">SPACE 0 → 800 μm</span><span id="next-character">次の文字候補 —</span></div></section>
+        </div>
+      </section>
+
+      <section class="results-context" aria-label="研究の評価結果">
+        <div class="results-intro"><p class="eyebrow">RESULTS, WITHOUT THE SPIN</p><h2>改善しなかった結果も、<br>そのまま。</h2><p>3 SeedのTiny Shakespeare評価では、<br>内部Weight学習の平均的な優位性は示せていません。</p><p>CEは文字あたりのnats。32文字ごとに状態をリセットした評価で、UIの連続生成とは条件が異なります。</p><a href="https://github.com/Reimangod/spinlanguage/blob/main/docs/RESULTS_JA.md" target="_blank" rel="noopener">実験結果を読む <svg><use href="#external"/></svg></a></div>
+        <div class="metric-grid"><article class="metric-card selected" data-metric="trained"><div><span>内部Weight学習</span><i>YIG</i></div><strong>3.2047</strong><p>Test CE <span>↓ 小さいほどよい</span></p><small>8内部Weight + 線形Readout</small></article><article class="metric-card" data-metric="fixed"><div><span>固定Reservoir</span><i>YIG</i></div><strong>3.2012</strong><p>Test CE</p><small>同一の線形Readout</small></article><article class="metric-card" data-metric="no_memory"><div><span>記憶なし</span><i>YIG</i></div><strong>3.1189</strong><p>Test CE</p><small>各文字で状態をリセット</small></article><article class="metric-card" data-metric="gru"><div><span>小GRU</span><i>DIGITAL</i></div><strong>2.2896</strong><p>Test CE</p><small>2,385学習パラメータ</small></article></div>
+      </section>
+      <footer class="footer"><span><b>研究MVP</b> · 文字単位の続きを生成するモデルです。対話型LLMではありません。</span><span>Trained on 2 × A100 · Inference in your browser</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

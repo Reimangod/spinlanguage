@@ -15,7 +15,27 @@
 
 ![概念図。計算結果の図ではない](results/aggregate/concept.png)
 
-## 環境とテスト
+## LMをブラウザで試す
+
+[LM Labを開く](https://spinlanguage-lm-lab-rei.rrui49851.chatgpt.site)（所有者本人のみアクセスできるページ）。
+
+`ui/` に学習済みcheckpointを使う生成UIがあります。内部Weight学習・固定Reservoir・記憶なし・小GRU、各3 Seedから選び、英字の書き出しから続きを生成できます。Temperature、文字数、Top-k、生成Seedを調整し、固定版との比較、停止、コピー、設定付きJSON保存ができます。推論はブラウザCPUのWeb Workerで動き、入力文をサーバーへ送信しません。
+
+```sh
+python3 -m http.server 8765 --bind 127.0.0.1 --directory ui
+# http://127.0.0.1:8765/ を開く
+node tests/browser_inference.mjs
+```
+
+ブラウザ版は元checkpointの重みを使用する数値推論です。実機YIGでの動作は未検証です。語彙はTiny Shakespeareの65文字なので、日本語入力には対応しません。研究のCEは32文字windowでの評価で、UIの連続生成品質を保証する値ではありません。
+
+モデルファイルとPython比較fixtureを再出力する場合:
+
+```sh
+PYTHONPATH=src .venv/bin/python scripts/export_browser_models.py
+```
+
+## Python環境とテスト
 
 Python 3.12を推奨。CPUでもforwardと物理テストは動く。GPU本学習はPyTorch CUDAを使う。
 

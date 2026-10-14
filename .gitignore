@@ -8,3 +8,4 @@ third_party/
 data/tinyshakespeare.txt
 magnonic-lm-mvp-v1.zip
 .DS_Store
+.site-work/

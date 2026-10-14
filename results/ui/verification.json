@@ -1,0 +1,36 @@
+{
+  "scope": "Existing spinlanguage MVP browser UI; separate from new inverse-design research",
+  "backend": "Browser CPU JavaScript in module Web Workers",
+  "models": 12,
+  "checkpoint_parity_cases": 36,
+  "max_abs_logit_error": 0.000028071534982465618,
+  "max_abs_state_error": 1.1844536929039862e-7,
+  "long_generation_cases": 12,
+  "long_generation_context": {
+    "prompt": 512,
+    "generated": 800,
+    "check": "finite logits and state, not a full-length Python parity claim"
+  },
+  "browser_checks": {
+    "comparison_generation": true,
+    "unsupported_input_error": true,
+    "seed_22_gru_generation": true,
+    "json_download_verified": true,
+    "stale_comparison_cleared": true,
+    "mobile_width": 390,
+    "desktop_width": 1280,
+    "no_horizontal_overflow": true
+  },
+  "review_checks": {
+    "worker_constructor_failure_cleanup": true,
+    "error_status_in_download": true
+  },
+  "deployment": {
+    "url": "https://spinlanguage-lm-lab-rei.rrui49851.chatgpt.site",
+    "status": "succeeded",
+    "project_id": "appgprj_6acee1dfec648191a14ccfb1632ed073",
+    "source_commit": "7eda19ad27ef22442325c6d61d25ad25e6087c41",
+    "version_id": "appgprj_6acee1dfec648191a14ccfb1632ed073~appgver_7df73afedfd08191be3d9ae7cbc8d480",
+    "audience": "owner-private"
+  }
+}

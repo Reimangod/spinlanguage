@@ -1,0 +1,1 @@
+{"name":"spinlanguage-lm-lab","private":true,"type":"module","scripts":{"test":"node ../tests/browser_inference.mjs"}}
