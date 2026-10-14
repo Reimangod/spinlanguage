@@ -3,7 +3,8 @@ __pycache__/
 .pytest_cache/
 *.pyc
 *.pt
-results/*/source.tar.gz
+!results/study-*/worker-*/results/*/*.pt
 third_party/
 data/tinyshakespeare.txt
 magnonic-lm-mvp-v1.zip
+.DS_Store
